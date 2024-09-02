@@ -69,15 +69,39 @@ main {
 }
 .bio {
   grid-area: bio;
+  color: var(--stats);
+
+  font-size: 0.8125rem;
+  line-height: 1.92;
+  padding-block-start: 2.0625rem;
 }
 .date-container {
   grid-area: date;
+  font-size: 0.8125rem;
+  line-height: 1.46;
+
+  color: var(--date-toggle);
 }
 .links {
   grid-area: links;
 }
 .name-container {
   grid-area: name;
+
+  display: flex;
+  flex-direction: column;
+
+  & h2 {
+    color: var(--stats-results);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  & h3 {
+    color: var(--blue);
+    font-size: 0.8125rem;
+    line-height: 1.46;
+  }
 }
 .search-container {
   background-color: var(--profile-bg);
@@ -118,10 +142,39 @@ main {
 }
 .stats-container {
   grid-area: stats;
+  display: flex;
+  background-color: var(--stats-bg);
+  justify-content: space-evenly;
+  border-radius: 0.625rem;
+  margin-block: 1.4375rem 1.5rem;
+  padding-block: 1.125rem 1.1875rem;
+  padding-inline: 0.9375rem 0.875rem;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  & h4 {
+    color: var(--stats);
+    font-size: 0.6875rem;
+    line-height: 1.45;
+  }
+
+  & p {
+    color: var(--stats-results);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
 
 .profile {
   display: grid;
+  background-color: var(--profile-bg);
+  border-radius: 0.9375rem;
+  padding-block: 2rem 3rem;
+  padding-inline: 1.5rem;
 
   grid-template-areas:
     "profilePic name name"
