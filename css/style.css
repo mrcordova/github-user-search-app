@@ -84,6 +84,26 @@ main {
 }
 .links {
   grid-area: links;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  & svg > :is(path, g) {
+    fill: var(--stats);
+  }
+  & > div {
+    color: var(--stats);
+    /* flex: 1; */
+    display: flex;
+    gap: 1.203125rem;
+  }
+  & > .unavailable {
+    color: hsl(from var(--stats) h s l / 0.5);
+
+    & svg > :is(path, g) {
+      fill: hsl(from var(--stats) h s l / 0.5);
+    }
+  }
 }
 .name-container {
   grid-area: name;
