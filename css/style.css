@@ -1,0 +1,17 @@
+:root {
+  --blue: hsl(212, 100%, 50%);
+  --date-toggle: hsl(217, 20%, 51%);
+  --stats: hsl(217, 35%, 45%);
+  --stats-results: hsl(217, 21%, 21%);
+  --stats-bg: hsl(227, 100%, 98%);
+  --profile-bg: hsl(0, 0%, 100%);
+}
+
+:root.dark-mode {
+  --blue: hsl(212, 100%, 50%);
+  --date-toggle: hsl(0, 0%, 100%);
+  --stats: var(--date-toggle);
+  --stats-results: var(var(--date-toggle));
+  --stats-bg: hsl(220, 40%, 13%);
+  --profile-bg: hsl(222, 41%, 20%);
+}
