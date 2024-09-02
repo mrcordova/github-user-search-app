@@ -1,28 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | GitHub user search app</title>
-</head>
-<body>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.cs" />
+    <script type="module" src="js/script.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png" />
 
-  devfinder
+    <title>Frontend Mentor | GitHub user search app</title>
+  </head>
+  <body>
+    <header>
+      <h1>devfinder</h1>
 
-  Light
-  Dark
-
-  Search GitHub username...
-  Search
-
-  Joined
-
-  Repos
-  Followers
-  Following
-
-</body>
+      <button>
+        Light
+        <img src="./assets/icon-sun.svg" alt="sun" />
+      </button>
+    </header>
+    <main>
+      <div>
+        <img src="./assets/icon-search.svg" alt="search icon" />
+        <input type="text" placeholder="Search GitHub username..." />
+        <button>Search</button>
+      </div>
+    </main>
+    <div>
+      <img src="" alt="profile pic" />
+    </div>
+    <div>
+      <h2>The Octocar</h2>
+      <p>@octocat</p>
+    </div>
+    <p>
+      Joined
+      <span>25 Jan 2011</span>
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
+      Quisque volutpat mattis eros.
+    </p>
+    <div>
+      <div>
+        <h3>Repos</h3>
+        <p>8</p>
+      </div>
+      <div>
+        <h3>Followers</h3>
+        <p>3938</p>
+      </div>
+      <div>
+        <h3>Following</h3>
+        <p>9</p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <img src="./assets/icon-location.svg" alt="location pin" />
+        San Francisco
+      </div>
+      <div>
+        <img src="./assets/icon-website.svg" alt="website link icon" />
+        https://github.blog
+      </div>
+      <div>
+        <img src="./assets/icon-twitter.svg" alt="twitter icon" />
+        Not Available
+      </div>
+      <div>
+        <img src="./assets/icon-company.svg" alt="building icon" />
+        @github
+      </div>
+    </div>
+  </body>
 </html>
