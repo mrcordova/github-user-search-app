@@ -14,6 +14,14 @@
 
 :root {
   --blue: hsl(212, 100%, 50%);
+  --date-toggle: hsl(0, 0%, 100%);
+  --stats: var(--date-toggle);
+  --stats-results: var(--date-toggle);
+  --stats-bg: hsl(220, 40%, 13%);
+  --profile-bg: hsl(222, 41%, 20%);
+}
+:root.light-mode {
+  --blue: hsl(212, 100%, 50%);
   --date-toggle: hsl(217, 20%, 51%);
   --stats: hsl(217, 35%, 45%);
   --stats-results: hsl(217, 21%, 21%);
@@ -21,11 +29,39 @@
   --profile-bg: hsl(0, 0%, 100%);
 }
 
-:root.dark-mode {
-  --blue: hsl(212, 100%, 50%);
-  --date-toggle: hsl(0, 0%, 100%);
-  --stats: var(--date-toggle);
-  --stats-results: var(var(--date-toggle));
-  --stats-bg: hsl(220, 40%, 13%);
-  --profile-bg: hsl(222, 41%, 20%);
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--stats-bg);
+  min-height: 100%;
+  display: grid;
+  place-content: safe center;
+
+  padding-inline: 1.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--stats-results);
+  align-items: center;
+  h1 {
+    font-size: 1.625rem;
+    line-height: 1.5;
+  }
+
+  button {
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    line-height: 1.46;
+    letter-spacing: 0.15625rem;
+    gap: 1rem;
+  }
+}
+
+#toggle-btn {
+  display: flex;
 }
