@@ -83,7 +83,7 @@ main {
   color: var(--date-toggle);
 }
 .links {
-  grid-area: links;
+  /* grid-area: linkFirst; */
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -104,6 +104,13 @@ main {
       fill: hsl(from var(--stats) h s l / 0.5);
     }
   }
+}
+.linkFirst {
+  grid-area: linkFirst;
+  padding-block-end: 1rem;
+}
+.linkSecond {
+  grid-area: linkSecond;
 }
 .name-container {
   grid-area: name;
@@ -197,17 +204,33 @@ main {
   padding-inline: 1.5rem;
 
   grid-template-areas:
-    "profilePic name name"
-    "profilePic date date"
-    "bio bio bio"
-    "stats stats stats"
-    "links links links";
+    "profilePic name name name"
+    "profilePic date date date"
+    "bio bio bio bio"
+    "stats stats stats stats"
+    "linkFirst linkFirst linkFirst linkFirst"
+    "linkSecond linkSecond linkSecond linkSecond";
 }
 .profile-pic {
   grid-area: profilePic;
-  width: 4.375rem;
-  height: 4.375rem;
+  /* Mobile */
+  /* width: 4.375rem; */
+  /* height: 4.375rem; */
+  /* Tablet */
+  width: 7.3125rem;
+  height: 7.3125rem;
 }
 #toggle-btn {
   display: flex;
+}
+
+@media (min-width: 48rem) {
+  .profile {
+    grid-template-areas:
+      "profilePic name name name"
+      "profilePic date date date"
+      "bio bio bio bio"
+      "stats stats stats stats"
+      "linkFirst linkFirst linkSecond linkSecond";
+  }
 }
