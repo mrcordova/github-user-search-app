@@ -100,6 +100,11 @@ main {
   & > .unavailable {
     color: hsl(from var(--stats) h s l / 0.5);
 
+    & a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     & svg > :is(path, g) {
       fill: hsl(from var(--stats) h s l / 0.5);
     }
