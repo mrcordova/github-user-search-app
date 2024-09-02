@@ -40,6 +40,7 @@ body {
   place-content: safe center;
 
   padding-inline: 1.5rem;
+  gap: 2.25rem;
 }
 
 header {
@@ -61,7 +62,44 @@ header {
     gap: 1rem;
   }
 }
+.search-container {
+  background-color: var(--profile-bg);
+  display: flex;
+  align-items: center;
+  border-radius: 0.9375rem;
+  /* justify-content: space-between; */
+  /* gap: 0.4375rem; */
 
+  & button {
+    color: #ffffff;
+    background-color: var(--blue);
+    border-radius: 0.625rem;
+    margin-block: 0.40625rem 0.46875rem;
+    margin-inline: 0.4375rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding-block: 0.78125rem;
+    padding-inline: 1rem;
+  }
+
+  & img {
+    padding-inline: 1rem 0.4375rem;
+  }
+
+  & input {
+    all: unset;
+    color: var(--date-toggle);
+    /* margin-inline-end: 0.4375rem; */
+    font-size: 0.8125rem;
+    line-height: 1.92;
+    width: 11.9375rem;
+
+    &::placeholder {
+      color: inherit;
+      font-size: inherit;
+    }
+  }
+}
 #toggle-btn {
   display: flex;
 }
