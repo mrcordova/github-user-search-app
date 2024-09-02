@@ -105,6 +105,10 @@ main {
     }
   }
 }
+
+.unavailable {
+  color: hsl(from var(--stats) h s l / 0.5);
+}
 .linkFirst {
   grid-area: linkFirst;
   padding-block-end: 1rem;
@@ -213,15 +217,17 @@ main {
 }
 .profile-pic {
   grid-area: profilePic;
-  & img {
-    border-radius: 50%;
-  }
+
   /* Mobile */
   /* width: 4.375rem; */
   /* height: 4.375rem; */
   /* Tablet */
   width: 7.3125rem;
   height: 7.3125rem;
+
+  & img {
+    border-radius: 50%;
+  }
 }
 #toggle-btn {
   display: flex;
