@@ -213,6 +213,9 @@ main {
 }
 .profile-pic {
   grid-area: profilePic;
+  & img {
+    border-radius: 50%;
+  }
   /* Mobile */
   /* width: 4.375rem; */
   /* height: 4.375rem; */
