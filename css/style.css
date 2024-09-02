@@ -62,6 +62,11 @@ header {
     gap: 1rem;
   }
 }
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .search-container {
   background-color: var(--profile-bg);
   display: flex;
