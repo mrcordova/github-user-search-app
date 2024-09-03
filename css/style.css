@@ -47,6 +47,8 @@ body {
   /* Tablet */
   padding-inline: 1.5rem;
   gap: 2.1875rem;
+  /* Desktop */
+  gap: 2.25rem;
 }
 
 header {
@@ -88,6 +90,8 @@ main {
   font-size: 0.9375rem;
   line-height: 1.66;
   padding-block-start: 1.5rem;
+  /* Desktop */
+  padding-block-start: 1.25rem;
 }
 .date-container {
   grid-area: date;
@@ -98,6 +102,7 @@ main {
   /* Tablet */
   font-size: 0.9375rem;
   line-height: 1.46;
+  /* Desktop */
 }
 .links {
   /* grid-area: linkFirst; */
@@ -285,9 +290,11 @@ main {
   padding-block: 1.125rem 1.1875rem;
   padding-inline: 0.9375rem 0.875rem;
   /* Tablet */
-  margin-block: 2rem 1.875rem;
+  margin-block: 2rem 2.3125rem;
   padding-block: 1.125rem 1.1875rem;
   padding-inline: 2rem 6rem;
+  /* Desktop */
+  padding-inline: 2rem 5.1875rem;
 
   & > div {
     display: flex;
@@ -334,14 +341,18 @@ main {
   border-radius: 0.9375rem;
   padding-block: 3.25rem 2.5rem;
   padding-inline: 2.5rem;
+  /* Desktop */
+  border-radius: 0.9375rem;
+  padding-block: 2.75rem 3rem;
+  padding-inline: 3rem;
 
   grid-template-areas:
-    "profilePic  name "
-    "profilePic  date "
-    "bio bio  "
-    "stats stats  "
-    "linkFirst   linkFirst"
-    "linkSecond   linkSecond";
+    "profilePic name"
+    "profilePic date"
+    "bio bio"
+    "stats stats"
+    "linkFirst linkFirst"
+    "linkSecond linkSecond";
 }
 .profile-pic {
   grid-area: profilePic;
@@ -352,7 +363,10 @@ main {
   /* Tablet */
   width: 7.3125rem;
   height: 7.3125rem;
-  /* margin-inline-end: 2.5625rem; */
+  /* Tablet maybe not needed*/
+  margin-inline-end: 2.5625rem;
+  /* Desktop */
+  margin-inline-end: 2.3125rem;
 
   & img {
     border-radius: 50%;
