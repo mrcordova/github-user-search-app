@@ -234,19 +234,19 @@ main {
   padding-inline: 1.5rem;
 
   grid-template-areas:
-    "profilePic name name name"
-    "profilePic date date date"
-    "bio bio bio bio"
-    "stats stats stats stats"
-    "linkFirst linkFirst linkFirst linkFirst"
-    "linkSecond linkSecond linkSecond linkSecond";
+    "profilePic  name "
+    "profilePic  date "
+    "bio bio  "
+    "stats stats  "
+    "linkFirst   linkFirst"
+    "linkSecond   linkSecond";
 }
 .profile-pic {
   grid-area: profilePic;
 
   /* Mobile */
-  width: 4.375rem;
-  height: 4.375rem;
+  /* width: 4.375rem; */
+  /* height: 4.375rem; */
   /* Tablet */
   /* width: 7.3125rem; */
   /* height: 7.3125rem; */
@@ -267,5 +267,15 @@ main {
       "bio bio bio bio"
       "stats stats stats stats"
       "linkFirst linkFirst linkSecond linkSecond";
+  }
+}
+
+@media (min-width: 90rem) {
+  .profile {
+    grid-template-areas:
+      "profilePic name date"
+      "profilePic bio bio"
+      "profilePic stats stats "
+      "profilePic linkFirst linkSecond";
   }
 }
