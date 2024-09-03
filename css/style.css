@@ -19,8 +19,10 @@
   --stats-results: var(--date-toggle);
   --stats-bg: hsl(220, 40%, 13%);
   --profile-bg: hsl(222, 41%, 20%);
+  --button-hover: #90a4d4;
 }
 :root.light-mode {
+  --button-hover: #222731;
   --blue: hsl(212, 100%, 50%);
   --date-toggle: hsl(217, 20%, 51%);
   --stats: hsl(217, 35%, 45%);
@@ -55,7 +57,7 @@ header {
   }
 
   & svg > g {
-    fill: var(--stats-results);
+    fill: var(--date-toggle);
   }
 }
 main {
@@ -174,6 +176,11 @@ main {
     line-height: 1.5;
     padding-block: 0.78125rem;
     padding-inline: 1rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #60abff;
+    }
   }
 
   & img {
@@ -184,6 +191,7 @@ main {
     all: unset;
     color: var(--date-toggle);
     /* margin-inline-end: 0.4375rem; */
+    caret-color: var(--blue);
     font-size: 0.8125rem;
     line-height: 1.92;
     width: 11.9375rem;
@@ -259,8 +267,14 @@ main {
   letter-spacing: 0.15625rem;
   gap: 1rem;
 
+  color: var(--date-toggle);
   &:hover {
     cursor: pointer;
+    color: var(--button-hover);
+
+    & svg > g {
+      fill: var(--button-hover);
+    }
   }
 }
 
