@@ -47,7 +47,7 @@ window.addEventListener("load", async () => {
   profileImg.setAttribute("src", avatar_url);
   nameEle.textContent = name != null ? name : login;
   username.textContent = `@${login}`;
-  date.textContent = ` ${
+  date.textContent = `${dateText.getDate()} ${
     months[dateText.getMonth()]
   } ${dateText.getFullYear()}`;
   bioPara.textContent = bio != null ? bio : "This profile has no bio";
