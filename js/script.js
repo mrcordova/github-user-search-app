@@ -107,4 +107,5 @@ searchBtn.addEventListener("click", async (e) => {
 
   userName = searchInput.value;
   await updateProfile();
+  searchInput.value = "";
 });
