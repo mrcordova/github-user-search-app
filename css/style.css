@@ -41,14 +41,17 @@ body {
   display: grid;
   place-content: safe center;
 
+  padding-inline: 1.5rem;
+  gap: clamp(2.1875rem, 2.3096rem + -0.2545vw, 2.25rem);
+
   /* Mobile */
-  padding-inline: 1.5rem;
-  gap: 2.25rem;
+  /* padding-inline: 1.5rem; */
+  /* gap: 2.25rem; */
   /* Tablet */
-  padding-inline: 1.5rem;
-  gap: 2.1875rem;
+  /* padding-inline: 1.5rem; */
+  /* gap: 2.1875rem; */
   /* Desktop */
-  gap: 2.25rem;
+  /* gap: 2.25rem; */
 }
 
 header {
@@ -58,12 +61,14 @@ header {
   color: var(--stats-results);
   align-items: center;
   h1 {
+    font-size: 1.625rem;
+    line-height: 1.5;
     /* Mobile */
-    font-size: 1.625rem;
-    line-height: 1.5;
+    /* font-size: 1.625rem; */
+    /* line-height: 1.5; */
     /* Tablet */
-    font-size: 1.625rem;
-    line-height: 1.5;
+    /* font-size: 1.625rem; */
+    /* line-height: 1.5; */
   }
 
   & svg > g {
@@ -73,21 +78,26 @@ header {
 main {
   display: flex;
   flex-direction: column;
+
+  gap: clamp(1rem, 0.5229rem + 2.0356vw, 1.5rem);
   /* Mobile */
-  gap: 1rem;
+  /* gap: 1rem; */
   /* tablet */
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
 }
 .bio {
   grid-area: bio;
   color: var(--stats);
 
-  /* Mobile */
-  font-size: 0.8125rem;
+  font-size: clamp(0.8125rem, 0.6932rem + 0.5089vw, 0.9375rem);
   line-height: 1.92;
-  padding-block-start: 2.0625rem;
+  padding-block-start: clamp(1.5rem, 2.5992rem + -2.2901vw, 2.0625rem);
+  /* Mobile */
+  /* font-size: 0.8125rem; */
+  /* line-height: 1.92; */
+  /* padding-block-start: 2.0625rem; */
   /* Tablet */
-  font-size: 0.9375rem;
+  /* font-size: 0.9375rem; */
   line-height: 1.66;
   padding-block-start: 1.5rem;
   /* Desktop */
@@ -392,6 +402,24 @@ main {
 }
 
 @media (min-width: 48rem) {
+  body {
+    gap: clamp(2.1875rem, 2.1161rem + 0.1488vw, 2.25rem);
+    /* Tablet */
+    /* padding-inline: 1.5rem; */
+    /* gap: 2.1875rem; */
+    /* Desktop */
+    /* gap: 2.25rem; */
+  }
+
+  .bio {
+    padding-block-start: clamp(1.25rem, 1.7857rem + -0.5952vw, 1.5rem);
+    /* Tablet */
+    /* font-size: 0.9375rem; */
+    line-height: 1.66;
+    /* padding-block-start: 1.5rem; */
+    /* Desktop */
+    /* padding-block-start: 1.25rem; */
+  }
   .profile {
     grid-template-areas:
       "profilePic name name name"
