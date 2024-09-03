@@ -9,6 +9,7 @@ let stats = document.querySelectorAll(
   "p[data-repo], p[data-followers], p[data-following]"
 );
 let links = document.querySelectorAll(".links>div");
+const toggleBtn = document.getElementById("toggle-btn");
 
 const months = {
   0: "Jan",
@@ -84,4 +85,8 @@ window.addEventListener("load", async () => {
     `https://github.com/${company.slice(1)}`
   );
   links[3].classList.toggle("unavailable", company == null);
+});
+
+toggleBtn.addEventListener("click", () => {
+  document.documentElement.classList.toggle("light-mode");
 });
