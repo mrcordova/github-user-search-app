@@ -201,11 +201,14 @@ main {
   color: #f74646;
   font-size: 0.9375rem;
   line-height: 1.466;
-  display: none;
   /* padding-inline-end: 0.875rem; */
   white-space: pre;
   /* display: flex; */
   /* flex-direction: column; */
+}
+
+.hide {
+  display: none;
 }
 
 .search-container {
