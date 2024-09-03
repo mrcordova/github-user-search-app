@@ -106,12 +106,15 @@ main {
 .date-container {
   grid-area: date;
   color: var(--date-toggle);
+
+  font-size: clamp(0.8125rem, 0.6932rem + 0.5089vw, 0.9375rem);
+  line-height: 1.46;
   /* Mobile */
-  font-size: 0.8125rem;
-  line-height: 1.46;
+  /* font-size: 0.8125rem; */
+  /* line-height: 1.46; */
   /* Tablet */
-  font-size: 0.9375rem;
-  line-height: 1.46;
+  /* font-size: 0.9375rem; */
+  /* line-height: 1.46; */
   /* Desktop */
 }
 .links {
