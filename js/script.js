@@ -10,7 +10,8 @@ let stats = document.querySelectorAll(
 );
 let links = document.querySelectorAll(".links>div");
 const toggleBtn = document.getElementById("toggle-btn");
-
+const searchInput = document.querySelector("input[data-search]");
+const searchBtn = document.querySelector("button[data-search-btn]");
 const months = {
   0: "Jan",
   1: "Feb",
@@ -26,9 +27,8 @@ const months = {
   11: "Dec",
 };
 
-window.addEventListener("load", async () => {
+async function updateProfile() {
   const githubResponse = await fetch(`${GITHUB_API}${userName}`);
-  //   console.log(await githubResponse.json());
   const {
     avatar_url,
     bio,
@@ -82,11 +82,21 @@ window.addEventListener("load", async () => {
     company != null ? company : "Not Available";
   links[3].children[1].setAttribute(
     "href",
-    `https://github.com/${company.slice(1)}`
+    `https://github.com/${company?.slice(1)}`
   );
   links[3].classList.toggle("unavailable", company == null);
+}
+
+window.addEventListener("load", async () => {
+  await updateProfile();
 });
 
 toggleBtn.addEventListener("click", () => {
   document.documentElement.classList.toggle("light-mode");
+});
+
+searchBtn.addEventListener("click", async (e) => {
+  // console.log(searchInput.value);
+  userName = searchInput.value;
+  await updateProfile();
 });

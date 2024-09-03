@@ -41,8 +41,12 @@ body {
   display: grid;
   place-content: safe center;
 
+  /* Mobile */
   padding-inline: 1.5rem;
   gap: 2.25rem;
+  /* Tablet */
+  padding-inline: 1.5rem;
+  gap: 2.1875rem;
 }
 
 header {
@@ -258,6 +262,9 @@ main {
     /* width: 7.6875rem; */
     /* width: 11.9375rem; */
 
+    &:hover {
+      cursor: pointer;
+    }
     &::placeholder {
       color: inherit;
     }
