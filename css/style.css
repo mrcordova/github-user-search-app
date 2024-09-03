@@ -312,7 +312,7 @@ main {
   grid-area: stats;
   display: flex;
   background-color: var(--stats-bg);
-  justify-content: space-evenly;
+  justify-content: space-between;
   border-radius: 0.625rem;
 
   margin-block: clamp(1.4375rem, 0.9008rem + 2.2901vw, 2rem)
@@ -329,7 +329,7 @@ main {
   /* padding-block: 1.125rem 1.1875rem; */
   /* padding-inline: 2rem 6rem; */
   /* Desktop */
-  padding-inline: 2rem 5.1875rem;
+  /* padding-inline: 2rem 5.1875rem; */
 
   & > div {
     display: flex;
@@ -338,10 +338,17 @@ main {
     align-items: center;
 
     &:first-child {
-      padding-inline-end: 6.1875rem;
+      /* padding-inline-end: clamp(2.8956rem, -0.2455rem + 13.4021vw, 6.1875rem); */
+      /* padding-inline-end: clamp(2.625rem, -0.7743rem + 14.5038vw, 6.1875rem); */
+      /* 2.8956 */
+      /* padding-inline-end: 6.1875rem; */
     }
     &:nth-child(2) {
-      padding-inline-end: 5.125rem;
+      /* padding-inline-end: clamp(2.9375rem, 0.8502rem + 8.9059vw, 5.125rem); */
+      /* padding-inline-end: clamp(1.6875rem, -1.5926rem + 13.9949vw, 5.125rem); */
+
+      /* 2.9375 */
+      /* padding-inline-end: 5.125rem; */
     }
   }
   & h4 {
@@ -372,40 +379,47 @@ main {
 .profile {
   display: grid;
   background-color: var(--profile-bg);
+  border-radius: 0.9375rem;
+  padding-block: clamp(2rem, 0.8073rem + 5.0891vw, 3.25rem)
+    clamp(2.5rem, 3.4771rem + -2.0356vw, 3rem);
+  padding-inline: clamp(1.5rem, 0.5458rem + 4.0712vw, 2.5rem);
   /* Mobile */
-  border-radius: 0.9375rem;
-  padding-block: 2rem 3rem;
-  padding-inline: 1.5rem;
+  /* border-radius: 0.9375rem; */
+  /* padding-block: 2rem 3rem; */
+  /* padding-inline: 1.5rem; */
   /* Tablet */
-  border-radius: 0.9375rem;
-  padding-block: 3.25rem 2.5rem;
-  padding-inline: 2.5rem;
+  /* border-radius: 0.9375rem; */
+  /* padding-block: 3.25rem 2.5rem; */
+  /* padding-inline: 2.5rem; */
   /* Desktop */
   border-radius: 0.9375rem;
-  padding-block: 2.75rem 3rem;
-  padding-inline: 3rem;
+  /* padding-block: 2.75rem 3rem; */
+  /* padding-inline: 3rem; */
 
   grid-template-areas:
-    "profilePic name"
-    "profilePic date"
-    "bio bio"
-    "stats stats"
-    "linkFirst linkFirst"
-    "linkSecond linkSecond";
+    "profilePic profilePic name"
+    "profilePic profilePic date"
+    "bio bio bio"
+    "stats stats stats"
+    "linkFirst linkFirst linkFirst"
+    "linkSecond linkSecond linkSecond";
 }
 .profile-pic {
   grid-area: profilePic;
+
+  width: clamp(4.375rem, 1.572rem + 11.9593vw, 7.3125rem);
+  height: clamp(4.375rem, 1.572rem + 11.9593vw, 7.3125rem);
 
   /* Mobile */
   /* width: 4.375rem; */
   /* height: 4.375rem; */
   /* Tablet */
-  width: 7.3125rem;
-  height: 7.3125rem;
+  /* width: 7.3125rem; */
+  /* height: 7.3125rem; */
   /* Tablet maybe not needed*/
-  margin-inline-end: 2.5625rem;
+  /* margin-inline-end: 2.5625rem; */
   /* Desktop */
-  margin-inline-end: 2.3125rem;
+  /* margin-inline-end: 2.3125rem; */
 
   & img {
     border-radius: 50%;
@@ -472,12 +486,28 @@ main {
     }
   }
   .profile {
+    padding-block: clamp(2.75rem, 3.8214rem + -1.1905vw, 3.25rem)
+      clamp(2.5rem, 1.9286rem + 1.1905vw, 3rem);
+    padding-inline: clamp(2.5rem, 1.9286rem + 1.1905vw, 3rem);
+    /* Tablet */
+    /* border-radius: 0.9375rem; */
+    /* padding-block: 3.25rem 2.5rem; */
+    /* padding-inline: 2.5rem; */
+    /* Desktop */
+    /* border-radius: 0.9375rem; */
+    /* padding-block: 2.75rem 3rem; */
+    /* padding-inline: 3rem; */
+
     grid-template-areas:
       "profilePic name name name"
       "profilePic date date date"
       "bio bio bio bio"
       "stats stats stats stats"
       "linkFirst linkFirst linkSecond linkSecond";
+  }
+
+  .profile-pic {
+    margin-inline-end: clamp(0rem, -2.6429rem + 5.506vw, 2.3125rem);
   }
   .search-container {
     & input {
@@ -497,6 +527,13 @@ main {
     /* padding-inline: 2rem 5.1875rem; */
     & > div {
       align-items: flex-start;
+
+      &:first-child {
+        padding-inline-end: 6.1875rem;
+      }
+      &:nth-child(2) {
+        padding-inline-end: 5.125rem;
+      }
     }
 
     & h4 {
