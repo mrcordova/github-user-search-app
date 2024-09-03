@@ -52,6 +52,10 @@ header {
   color: var(--stats-results);
   align-items: center;
   h1 {
+    /* Mobile */
+    font-size: 1.625rem;
+    line-height: 1.5;
+    /* Tablet */
     font-size: 1.625rem;
     line-height: 1.5;
   }
@@ -63,22 +67,33 @@ header {
 main {
   display: flex;
   flex-direction: column;
+  /* Mobile */
   gap: 1rem;
+  /* tablet */
+  gap: 1.5rem;
 }
 .bio {
   grid-area: bio;
   color: var(--stats);
 
+  /* Mobile */
   font-size: 0.8125rem;
   line-height: 1.92;
   padding-block-start: 2.0625rem;
+  /* Tablet */
+  font-size: 0.9375rem;
+  line-height: 1.66;
+  padding-block-start: 1.5rem;
 }
 .date-container {
   grid-area: date;
+  color: var(--date-toggle);
+  /* Mobile */
   font-size: 0.8125rem;
   line-height: 1.46;
-
-  color: var(--date-toggle);
+  /* Tablet */
+  font-size: 0.9375rem;
+  line-height: 1.46;
 }
 .links {
   /* grid-area: linkFirst; */
@@ -91,7 +106,7 @@ main {
   }
   & > div {
     color: var(--stats);
-    /* flex: 1; */
+
     display: flex;
     gap: 1.203125rem;
 
@@ -99,6 +114,12 @@ main {
       color: inherit;
       text-decoration: none;
 
+      /* Mobile */
+      font-size: 0.8125rem;
+      line-height: 1.46;
+      /* tablet */
+      font-size: 0.9375rem;
+      line-height: 1.467;
       &:is(:active, :visited) {
         color: inherit;
         text-decoration: none;
@@ -136,6 +157,9 @@ main {
 .linkFirst {
   grid-area: linkFirst;
   padding-block-end: 1rem;
+
+  /* TAblet */
+  padding-inline-end: 4.06rem;
 }
 .linkSecond {
   grid-area: linkSecond;
@@ -146,16 +170,27 @@ main {
   display: flex;
   flex-direction: column;
 
+  /* Tablet */
+  justify-content: center;
+
   & h2 {
     color: var(--stats-results);
+    /* Mobile */
     font-size: 1rem;
+    line-height: 1.5;
+    /* Tablet */
+    font-size: 1.625rem;
     line-height: 1.5;
   }
 
   & h3 {
     color: var(--blue);
+    /* Mobile */
     font-size: 0.8125rem;
     line-height: 1.46;
+    /* Tablet */
+    font-size: 1rem;
+    line-height: 1.5;
   }
 }
 .search-container {
@@ -170,12 +205,20 @@ main {
     color: #ffffff;
     background-color: var(--blue);
     border-radius: 0.625rem;
+    /* Mobile */
     margin-block: 0.40625rem 0.46875rem;
     margin-inline: 0.4375rem;
     font-size: 0.875rem;
     line-height: 1.5;
     padding-block: 0.78125rem;
     padding-inline: 1rem;
+    /* Tablet */
+    margin-block: 0.40625rem 0.46875rem;
+    margin-inline: 0.4375rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-block: 0.78125rem 0.84375rem;
+    padding-inline: 1.5rem;
 
     &:hover {
       cursor: pointer;
@@ -184,17 +227,24 @@ main {
   }
 
   & img {
+    /* Mobile */
     padding-inline: 1rem 0.4375rem;
+    /* Tabker */
+    padding-inline: 2rem 1.49625rem;
   }
 
   & input {
     all: unset;
+    width: 100%;
     color: var(--date-toggle);
-    /* margin-inline-end: 0.4375rem; */
     caret-color: var(--blue);
+    /* Mobile */
     font-size: 0.8125rem;
     line-height: 1.92;
-    width: 11.9375rem;
+    /* Tablet */
+    font-size: 1.125rem;
+    line-height: 2.6875;
+    /* width: 11.9375rem; */
 
     &::placeholder {
       color: inherit;
@@ -207,7 +257,13 @@ main {
   background-color: var(--stats-bg);
   justify-content: space-evenly;
   border-radius: 0.625rem;
+
+  /* Mobile */
   margin-block: 1.4375rem 1.5rem;
+  padding-block: 1.125rem 1.1875rem;
+  padding-inline: 0.9375rem 0.875rem;
+  /* Tablet */
+  margin-block: 2rem 1.875rem;
   padding-block: 1.125rem 1.1875rem;
   padding-inline: 0.9375rem 0.875rem;
 
@@ -219,13 +275,21 @@ main {
   }
   & h4 {
     color: var(--stats);
+    /* Mobile */
     font-size: 0.6875rem;
     line-height: 1.45;
+    /* Tablet */
+    font-size: 0.8125rem;
+    line-height: 1.46;
   }
 
   & p {
     color: var(--stats-results);
+    /* Mobile */
     font-size: 1rem;
+    line-height: 1.5;
+    /* Tablet */
+    font-size: 1.375rem;
     line-height: 1.5;
   }
 }
@@ -233,9 +297,14 @@ main {
 .profile {
   display: grid;
   background-color: var(--profile-bg);
+  /* Mobile */
   border-radius: 0.9375rem;
   padding-block: 2rem 3rem;
   padding-inline: 1.5rem;
+  /* Tablet */
+  border-radius: 0.9375rem;
+  padding-block: 3.25rem 2.5rem;
+  padding-inline: 2.5rem;
 
   grid-template-areas:
     "profilePic  name "
@@ -252,8 +321,9 @@ main {
   /* width: 4.375rem; */
   /* height: 4.375rem; */
   /* Tablet */
-  /* width: 7.3125rem; */
-  /* height: 7.3125rem; */
+  width: 7.3125rem;
+  height: 7.3125rem;
+  margin-inline-end: 2.5625rem;
 
   & img {
     border-radius: 50%;
@@ -286,6 +356,12 @@ main {
       "bio bio bio bio"
       "stats stats stats stats"
       "linkFirst linkFirst linkSecond linkSecond";
+  }
+
+  .stats-container {
+    & > div {
+      align-items: flex-start;
+    }
   }
 }
 
