@@ -33,12 +33,14 @@
 
 html {
   height: 100%;
+  max-width: 45.625rem;
+  margin: 0 auto;
 }
 
 body {
   background-color: var(--stats-bg);
-  min-height: 100%;
   display: grid;
+  min-height: 100%;
   place-content: safe center;
 
   padding-inline: 1.5rem;
@@ -109,6 +111,7 @@ main {
 
   font-size: clamp(0.8125rem, 0.6932rem + 0.5089vw, 0.9375rem);
   line-height: 1.46;
+
   /* Mobile */
   /* font-size: 0.8125rem; */
   /* line-height: 1.46; */
@@ -296,9 +299,9 @@ main {
     /* line-height: 1.92; */
     /* Tablet */
     /* font-size: 1.125rem; */
-    line-height: 1.38;
+
     /* width: 7.6875rem; */
-    /* width: 11.9375rem; */
+    min-width: 11.9375rem;
 
     &:hover {
       cursor: pointer;
@@ -397,12 +400,12 @@ main {
   /* padding-inline: 3rem; */
 
   grid-template-areas:
-    "profilePic profilePic name"
-    "profilePic profilePic date"
-    "bio bio bio"
-    "stats stats stats"
-    "linkFirst linkFirst linkFirst"
-    "linkSecond linkSecond linkSecond";
+    "profilePic  name"
+    "profilePic  date"
+    "bio  bio"
+    "stats  stats"
+    "linkFirst  linkFirst"
+    "linkSecond  linkSecond";
 }
 .profile-pic {
   grid-area: profilePic;
@@ -551,5 +554,8 @@ main {
       "profilePic bio bio"
       "profilePic stats stats "
       "profilePic linkFirst linkSecond";
+  }
+  .date-container {
+    padding-block-start: 0.5rem;
   }
 }

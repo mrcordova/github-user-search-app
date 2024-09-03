@@ -68,9 +68,12 @@ async function updateProfile() {
 
     links[0].classList.toggle("unavailable", location == null);
 
-    links[1].children[1].textContent = blog != null ? blog : "Not Available";
+    console.log(blog);
+    links[1].children[1].textContent =
+      blog.trim() != "" ? blog : "Not Available";
+
     links[1].children[1].setAttribute("href", `${blog}`);
-    links[1].classList.toggle("unavailable", blog == null);
+    links[1].classList.toggle("unavailable", blog.trim() == "");
 
     links[2].children[1].textContent =
       twitter_username != null ? twitter_username : "Not Available";
