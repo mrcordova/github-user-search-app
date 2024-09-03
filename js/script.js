@@ -10,6 +10,21 @@ let stats = document.querySelectorAll(
 );
 let links = document.querySelectorAll(".links>div");
 
+const months = {
+  0: "Jan",
+  1: "Feb",
+  2: "Mar",
+  3: "April",
+  4: "May",
+  5: "Jun",
+  6: "Jul",
+  7: "Aug",
+  8: "Sept",
+  9: "Oct",
+  10: "Nov",
+  11: "Dec",
+};
+
 window.addEventListener("load", async () => {
   const githubResponse = await fetch(`${GITHUB_API}${userName}`);
   //   console.log(await githubResponse.json());
@@ -28,11 +43,13 @@ window.addEventListener("load", async () => {
     twitter_username,
   } = await githubResponse.json();
 
-  //   console.log(await githubResponse.json());
+  const dateText = new Date(created_at);
   profileImg.setAttribute("src", avatar_url);
   nameEle.textContent = name != null ? name : login;
   username.textContent = `@${login}`;
-  date.textContent = created_at;
+  date.textContent = ` ${
+    months[dateText.getMonth()]
+  } ${dateText.getFullYear()}`;
   bioPara.textContent = bio != null ? bio : "This profile has no bio";
   bioPara.classList.toggle("unavailable", bio == null);
 
